@@ -11,23 +11,23 @@
     scanf("%d",&d);
     printf("enter second number ");
     scanf("%f",&b);
-
-    if (d==1) {
-        c=a+b;
-        }
-
-    else if (d==2) {
-        c=a-b;
-    }
-    else if (d==3){
-        while(b==0){
-            printf("Please enter number other than 0 ");
-            scanf("%f",&b);
-        }
-        c=a/b;
-    }
-    else if (d==4){
-        c=a*b;
+    switch (d)
+    {
+        case 1: // code to be executed if d = 1;
+            c = a + b;
+            break;
+        case 2: // code to be executed if d = 2;
+            c = a - b;
+            break;
+        case 3: // code to be executed if d = 2;
+            while(b==0){
+                    printf("Please enter number other than 0 ");
+                    scanf("%f",&b);
+            }
+            c = a / b;
+            break;
+        default: // code to be executed if d doesn't match any cases
+            c =  a * b;
     }
     printf("the answer is %f \n",c);
 
