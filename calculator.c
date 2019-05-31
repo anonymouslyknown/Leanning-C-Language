@@ -1,3 +1,4 @@
+  // code for caculator
     #include<stdio.h>
     int main()
 
@@ -10,6 +11,7 @@
     scanf("%d",&d);
     printf("enter second number ");
     scanf("%f",&b);
+
     if (d==1) {
         c=a+b;
         }
@@ -27,9 +29,6 @@
     else if (d==4){
         c=a*b;
     }
-    // else{
-    //     c=a%b;
-    // }
     printf("the answer is %f \n",c);
 
 }
