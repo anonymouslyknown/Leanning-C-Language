@@ -19,6 +19,9 @@ void main()
         }
         if(s==n)
         {
+            /*A number is perfect if the sum of all its divisors
+             (other than the number) equals to the number
+             */
             printf("the number %d is perfect\n",n);
         }
 
