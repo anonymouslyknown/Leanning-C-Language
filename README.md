@@ -1,3 +1,3 @@
 # Learning-C-Language
 
-This reposirory contains multiple C programs.
+This repository contains multiple C programs.
