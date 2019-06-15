@@ -8,7 +8,7 @@ void main()
     scanf("%s",&a);
     for(i=0;a[i]!='\0';i++)
     {
-        k++;a
+        k++;
     }
     printf("length of string is:\t%d",k);
 }
