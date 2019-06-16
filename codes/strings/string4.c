@@ -1,3 +1,6 @@
+/*
+Printing a string with spaces.
+*/
 #include<stdio.h>
 void main()
 {
@@ -6,6 +9,6 @@ void main()
     printf("enter string element\n");
     scanf("%[^\n]",a);
 
-        printf("%s",a);
+
 }
 
