@@ -1,3 +1,4 @@
+//input a string and display it char. by char.
 #include<stdio.h>
 void main()
 {
