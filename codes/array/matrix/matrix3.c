@@ -20,14 +20,14 @@ void main()
         }
         printf("\n");
     }
-    printf("__________________");
-    for(r=0;r<=2;r++)
+    printf("__________________\n");
+    for(c=0;c<=2;c++)
     {
-        for(c=0,s=0;c<=2;c++)
+        for(r=0,s=0;r<=2;r++)
         {
             s=s+n[r][c];
         }
-
+        printf("%d\t",s);
     }
 
 }
