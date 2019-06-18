@@ -1,4 +1,4 @@
-//input a 2d array and display it and also right diagonal sum
+//input a 2d array and display it and also left diagonal sum
 #include<stdio.h>
 void main()
 {
@@ -21,9 +21,9 @@ void main()
         printf("\n");
     }
     printf("___________________________\n");
-    for(r=0,s=0;r<=2;r++)
+    for(r=0,c=2,s=0;r<=2;c--,r++)
     {
-        s=s+n[r][r];
+        s=s+n[r][c];
     }
-    printf("\t\t\t%d",s);
+    printf("%d",s);
 }
