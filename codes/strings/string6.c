@@ -3,16 +3,18 @@
 void main()
 {
     char a[100];
-    int i,v,c,n,s;
+    int i,v=0,c=0,n=0,s=0;
     printf("enter string element\n");
-    scanf("%[\^n]",a);
+    scanf("%[^\n]",a);
+    //gets(a);
     for(i=0;a[i]!='\0';i++)
     {
-        if(a[i]>=65&&a[i]<=90||a[i]>=97&&a[i]<=122)
+        if((a[i]>=65&&a[i]<=90)||(a[i]>=97&&a[i]<=122))
         {
-            if(a[i]=='a'||a[i]=='A'||a[i]=='b'||a[i]=='B'||a[i]=='c'||a[i]=='C'||a[i]=='d'||a[i]=='D'||a[i]=='e'||a[i]=='E')
+            if(a[i]=='a'||a[i]=='A'||a[i]=='e'||a[i]=='E'||a[i]=='i'||a[i]=='I'||a[i]=='o'||a[i]=='O'||a[i]=='u'||a[i]=='U')
             {
                 v++;
+
             }
             else
             {
