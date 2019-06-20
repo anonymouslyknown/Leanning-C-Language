@@ -11,19 +11,21 @@ void main()
         k++;
     }
     z=k;
-    for(i=0;i!='\0';i++,k--)
+    for(i=0;a[i]!='\0';i++,k--)
     {
         if(a[i]==a[k])
         {
-
+            if(i==z)
+            {
+                printf("the string is palindrome");
+            }
         }
         else
         {
             break;
+            printf("the string is not palindrome");
         }
     }
-    if(i-1==z)
-    {
-        printf("the string is palindrome");
-    }
+
+
 }
