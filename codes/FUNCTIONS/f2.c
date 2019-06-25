@@ -3,11 +3,12 @@
 void main()
 {
     char highest(int,int);
-    int a,b,z;
+    int a,b;
+    char z;
     printf("enter two numbers");
     scanf("%d%d",&a,&b);
     z= highest(a,b);
-    if(z==Y)
+    if(z=='Y')
     {
         printf("a is highest");
     }
@@ -20,10 +21,10 @@ void main()
     {
         if(x>y)
         {
-            return(Y);
+            return('Y');
         }
         else
         {
-            return(N);
+            return('N');
         }
     }

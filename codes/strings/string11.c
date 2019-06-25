@@ -5,27 +5,24 @@ void main()
     char a[100];
     int i,k,z;
     printf("enter string element:\n");
-    scanf("%c",a);
-    for(i=0;i!='\0';i++)
+    scanf("%[^\n]",a);
+    for(i=0,k=0;a[i]!='\0';i++)
     {
         k++;
     }
-    z=k;
-    for(i=0;a[i]!='\0';i++,k--)
+    z=k/2;
+    for(i=0;i<z;i++,k--)
     {
-        if(a[i]==a[k])
+        if(a[i]!=a[k-1])
         {
-            if(i==z)
-            {
-                printf("the string is palindrome");
-            }
-        }
-        else
-        {
-            break;
             printf("the string is not palindrome");
+            break;
         }
     }
+    if(i==z)
+    {
 
+        printf("the string is palindrome");
+    }
 
 }

@@ -2,29 +2,29 @@
 #include<stdio.h>
 void main()
 {
-    char highest(int,int);
+    char PL(int,int);
     int a,b,z;
     printf("enter two numbers");
     scanf("%d%d",&a,&b);
-    z= highest(a,b);
-    if(z==89)
+    z= PL(a,b);
+    if(z=='Y')
     {
-        printf("a is highest");
+        printf("profit");
     }
     else
     {
-        printf("b is highest");
+        printf("loss");
     }
 }
-    char highest(int x, int y)
+    char PL(int x, int y)
     {
         if(x>y)
         {
-            return(89);
+            return('Y');
         }
         else
         {
-            return(80);
+            return('N');
         }
     }
 

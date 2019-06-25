@@ -1,6 +1,6 @@
 //input any string and display in like this gopal goyal= g.goyal
 #include<stdio.h>
-void main()
+int main()
 {
     char a[100];
     int i;
@@ -26,4 +26,5 @@ void main()
     {
         printf("%c",a[i]);
     }
+    return(0);
 }
