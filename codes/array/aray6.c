@@ -1,4 +1,4 @@
-//input an array
+//input an array and store all negative elements at the end of array in same order using single array
 #include<stdio.h>
 void main()
 {
