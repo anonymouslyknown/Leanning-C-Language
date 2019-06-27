@@ -6,19 +6,36 @@ void main()
     int i,z;
     printf("enter string element:\n");
     scanf("%[^\n]",a);
-    for(i=0;a[i]!='\0';i++)
+    for(i=0;a[i]!=' ';i++)
+    {
+
+    }
+    for(i=i-1;i>=0;i--)
+    {
+        printf("%c",a[i]);
+    }
+    printf(" ");
+    for(i=0;a[i]!=' ';i++)
+    {
+
+    }
+    i=i+1;
+    for(;a[i]!='\0';i++)
     {
         if(a[i]==' ')
         {
             z=i;
             i--;
-            for(;i>=0;i--)
+            for(;a[i]!='\0';i--)
             {
                 printf("%c",a[i]);
             }
             i=z;
         }
+        printf(" ");
+        i++;
     }
+
     /*for(;i>=0;i--)
     {
         printf("%c",a[i]);
