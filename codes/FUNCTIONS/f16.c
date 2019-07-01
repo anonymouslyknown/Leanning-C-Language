@@ -10,22 +10,12 @@ void main()
     void lds(int[3][3]);
     void rds(int[3][3]);
     void is(int[3][3]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    void os(int[3][3]);
+    void mirror(int[3][3]);
+    void search(int[3][3]);
+    void rsort(int[3][3]);
+    void csort(int[3][3]);
+    void comsort(int[3][3]);
 
 
 
@@ -68,6 +58,30 @@ void main()
 
         case 8:
             is(n);
+            break;
+
+        case 9:
+            os(n);
+            break;
+
+        case 10:
+            mirror(n);
+            break;
+
+        case 11:
+            search(n);
+            break;
+
+        case 12:
+            rsort(n);
+            break;
+
+        case 13:
+            csort(n);
+            break;
+
+        case 14:
+            comsort(n);
             break;
 
         case 21:
@@ -211,5 +225,192 @@ void main()
         }
         printf("inner sum of matrix is= %d\n",s);
     }
+    //outer sum function
+    void os(int n[3][3])
+    {
+        int r,c,s=0;
+        for(r=0;r<=2;r++)
+        {
+            for(c=0;c<=2;c++)
+            {
+                if((r+c)%2==0)
+                {
+                    s=s+n[r][c];
+                }
+            }
+
+        }
+        printf("inner sum of matrix is= %d\n",s);
+    }\
+    //mirror function
+    void mirror(int n[3][3])
+    {
+        int r,c;
+    for(r=0;r<=2;r++)
+    {
+        for(c=0;c<=2;c++)
+        {
+            printf("%d\t",n[r][c]);
+
+        }
+         printf("|\t");
+         for(c=2;c>=0;c--)
+         {
+             printf("%d\t",n[r][c]);
+         }
+         printf("\n");
+    }
+    printf("__\t__\t__\t\t__\t__\t__\n");
+    for(r=2;r>=0;r--)
+    {
+        for(c=0;c<=2;c++)
+        {
+            printf("%d\t",n[r][c]);
+        }
+        printf("|\t");
+        for(c=2;c>=0;c--)
+        {
+            printf("%d\t",n[r][c]);
+        }
+        printf("\n");
+    }
+    }
+    //search function
+    void search(int n[3][3])
+    {
+         int r,c,se,k;
+    for(r=0;r<=2;r++)
+    {
+        for(c=0;c<=2;c++)
+        {
+            printf("%d\t",n[r][c]);
+        }
+        printf("\n");
+    }
+    printf("enter searching element:\t");
+    scanf("%d",&se);
+    printf("searching element=%d\n",se);
+    for(r=0,k=0;r<=2;r++)
+    {
+        for(c=0;c<=2;c++)
+        {
+            if(n[r][c]==se)
+            {
+                printf("%d found at %d number row and %d number column\n",se,r,c);
+            }
+            else
+            {
+                k++;
+            }
+        }
+    }
+    if(k==9)
+    {
+        printf(" not found");
+    }
+    }
+    //row sort function
+    void rsort(int n[3][3])
+    {
+        int r,c,k,temp;
+        for(r=0;r<=2;r++)
+        {
+            for(k=0;k<=2;k++)
+                {
+                    for(c=k+1;c<=2;c++)
+                    {
+                        if(n[r][c]<n[r][k])
+                        {
+                            temp=n[r][k];
+                            n[r][k]=n[r][c];
+                            n[r][c]=temp;
+                        }
+                    }
+                }
+        }
+
+         for(r=0;r<=2;r++)
+        {
+            for(c=0;c<=2;c++)
+            {
+                printf("%d\t",n[r][c]);
+            }
+            printf("\n");
+        }
+    }
+    //column sort function
+    void csort(int n[3][3])
+    {
+        int r,c,k,temp;
+        for(c=0;c<=2;c++)
+        {
+            for(k=0;k<=2;k++)
+                {
+                    for(r=k+1;r<=2;r++)
+                    {
+                        if(n[r][c]<n[r][k])
+                        {
+                            temp=n[r][k];
+                            n[r][k]=n[r][c];
+                            n[r][c]=temp;
+                        }
+                    }
+                }
+        }
+
+         for(r=0;r<=2;r++)
+        {
+            for(c=0;c<=2;c++)
+            {
+                printf("%d\t",n[r][c]);
+            }
+            printf("\n");
+        }
+    }
+    //complete sort function
+    void comsort(int n[3][3])
+    {
+                int r,c,k,temp;
+        for(r=0;r<=2;r++)
+        {
+            for(k=0;k<=2;k++)
+                {
+                    for(c=k+1;c<=2;c++)
+                    {
+                        if(n[r][c]<n[r][k])
+                        {
+                            temp=n[r][k];
+                            n[r][k]=n[r][c];
+                            n[r][c]=temp;
+                        }
+                    }
+                }
+        }
+        for(c=0;c<=2;c++)
+        {
+            for(k=0;k<=2;k++)
+                {
+                    for(r=k+1;r<=2;r++)
+                    {
+                        if(n[r][c]<n[r][k])
+                        {
+                            temp=n[r][k];
+                            n[r][k]=n[r][c];
+                            n[r][c]=temp;
+                        }
+                    }
+                }
+        }
+
+         for(r=0;r<=2;r++)
+        {
+            for(c=0;c<=2;c++)
+            {
+                printf("%d\t",n[r][c]);
+            }
+            printf("\n");
+        }
+    }
+
 
 
