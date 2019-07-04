@@ -13,6 +13,7 @@ void main()
         exit(0);
     }
     printf("start writing (press enter to exit)");
+    fflush(stdin);
     scanf("%c",&c);
     while(c!='\n')
     {

@@ -26,7 +26,7 @@ void main()
         {
             z=i;
             i--;
-            for(;a[i]!='\0';i--)
+            for(;a[i]!=' ';i--)
             {
                 printf("%c",a[i]);
             }
