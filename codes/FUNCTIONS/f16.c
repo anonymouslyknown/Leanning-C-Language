@@ -15,7 +15,8 @@ void main()
     void search(int[3][3]);
     void rsort(int[3][3]);
     void csort(int[3][3]);
-    void comsort(int[3][3]);
+    void comsort(int[3][3]);//com=complete
+    void input2(int[3][3]);
 
 
 
@@ -82,6 +83,10 @@ void main()
 
         case 14:
             comsort(n);
+            break;
+
+        case 15:
+            input2(n);
             break;
 
         case 21:
@@ -411,6 +416,18 @@ void main()
             printf("\n");
         }
     }
-
+     //input  second matrix function
+    void input2(int n[3][3])
+    {
+        int r,c;
+        for(r=0;r<=2;r++)
+        {
+            for(c=0;c<=2;c++)
+            {
+                printf("enter element ");
+                scanf("%d",&n[r][c]);
+            }
+        }
+    }
 
 

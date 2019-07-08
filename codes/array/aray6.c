@@ -12,15 +12,20 @@ void main()
             j++;
         }
     }
-    for(i=0;j<=9;i++)
+    for(i=0;i<=9;i++)
     {
         if(a[i]<0)
         {
-            temp=a[j];
-            a[j]=a[i];
+            temp=a[i];
+            if(a[i+1]>=0)
+            {
+                a[i]=a[i+1];
+                a[i+1]=temp;
+            }
+           /* a[j]=a[i];
             a[i]=temp;
             i--;
-            j++;
+            j++;*/
         }
     }
     for(i=0;i<=9;i++)

@@ -30,10 +30,14 @@ void main()
             {
                 printf("%c",a[i]);
             }
-            i=z;
+            i=z+1;
         }
         printf(" ");
-        i++;
+    }
+    i--;
+    for(;a[i]!=' ';i--)
+    {
+        printf("%c",a[i]);
     }
 
     /*for(;i>=0;i--)
